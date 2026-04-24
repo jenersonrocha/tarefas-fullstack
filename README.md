@@ -23,8 +23,8 @@ Este sistema permite que você possa:
 - Angular
 - TypeScript
 - HTML
-- C#
-- 
+  
+  
 # Ferramentas
 - Git & GitHub
 - Visual Studio code
