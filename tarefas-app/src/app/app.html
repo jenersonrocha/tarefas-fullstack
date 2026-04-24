@@ -1,0 +1,62 @@
+<h1>Lista de Tarefas</h1>
+
+<h2>Criar / Editar Tarefa</h2>
+
+<form (ngSubmit)="salvarTarefa()">
+
+  <input
+    type="text"
+    [(ngModel)]="novaTarefa.titulo"
+    name="titulo"
+    placeholder="Título"
+    required
+  />
+
+  <input
+    type="text"
+    [(ngModel)]="novaTarefa.descricao"
+    name="descricao"
+    placeholder="Descrição"
+  />
+
+  <button type="submit">
+    {{ editando ? 'Atualizar' : 'Adicionar' }}
+  </button>
+
+  <button
+    type="button"
+    *ngIf="editando"
+    (click)="cancelarEdicao()"
+  >
+    Cancelar
+  </button>
+
+</form>
+
+<hr />
+
+<ul>
+  <li *ngFor="let tarefa of tarefas">
+
+    <strong>{{ tarefa.titulo }}</strong>
+    - {{ tarefa.descricao }}
+    - {{ tarefa.status }}
+
+    <span>
+    {{ tarefa.concluida ? 'Concluída' : 'Pendente' }}
+    </span>
+
+    <button type="button" (click)="editarModo(tarefa)">
+      ✏️
+    </button>
+
+    <button type="button" (click)="deletarTarefa(tarefa.id)">
+      🗑️
+    </button>
+
+    <button type="button" (click)="toggleConcluida(tarefa)">
+      ✔️ {{ tarefa.concluida ? 'Desmarcar' : 'Concluir' }}
+    </button>
+
+  </li>
+</ul>
