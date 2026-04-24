@@ -51,8 +51,9 @@ A API segue o padrão REST e possui os seguintes endpoints:
 A API utiliza o **Entity Framework Core** para comunicação com o banco de dados e o **Swagger** para documentação e testes dos endpoints.
  
 ->> Para Rodar o projeto:
-# Backend
-```bash
+
+# Backend 
+ bash
 1) cd ProjetoApi
 2) dotnet run
 
@@ -63,6 +64,7 @@ A API utiliza o **Entity Framework Core** para comunicação com o banco de dado
 
 # Acesso 
 Frontend: http://localhost:4200
+
 Backend: http://localhost:5111/swagger/index.html
 
 Autor
